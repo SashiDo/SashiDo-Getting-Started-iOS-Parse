@@ -12,6 +12,7 @@
 		3BDB39521F7FA59A00DDBB7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB39501F7FA59A00DDBB7B /* Main.storyboard */; };
 		3BDB39541F7FA59A00DDBB7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB39531F7FA59A00DDBB7B /* Assets.xcassets */; };
 		3BDB39571F7FA59A00DDBB7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BDB39551F7FA59A00DDBB7B /* LaunchScreen.storyboard */; };
+		D6F0A797F3A8B8130CAE3102 /* Pods_SashidoParseIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84BFA03332C600CA5F7031B1 /* Pods_SashidoParseIntegration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		3BDB39531F7FA59A00DDBB7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3BDB39561F7FA59A00DDBB7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3BDB39581F7FA59A00DDBB7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76BFD7834B0A8E2E24864531 /* Pods-SashidoParseIntegration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SashidoParseIntegration.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SashidoParseIntegration/Pods-SashidoParseIntegration.debug.xcconfig"; sourceTree = "<group>"; };
+		84BFA03332C600CA5F7031B1 /* Pods_SashidoParseIntegration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SashidoParseIntegration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAEE13E0A689C1FA75971D00 /* Pods-SashidoParseIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SashidoParseIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-SashidoParseIntegration/Pods-SashidoParseIntegration.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6F0A797F3A8B8130CAE3102 /* Pods_SashidoParseIntegration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		068D4A357C632550D0F591AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84BFA03332C600CA5F7031B1 /* Pods_SashidoParseIntegration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3BDB39401F7FA59A00DDBB7B = {
 			isa = PBXGroup;
 			children = (
 				3BDB394B1F7FA59A00DDBB7B /* SashidoParseIntegration */,
 				3BDB394A1F7FA59A00DDBB7B /* Products */,
+				F7280D51602947B429679FBD /* Pods */,
+				068D4A357C632550D0F591AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = SashidoParseIntegration;
 			sourceTree = "<group>";
 		};
+		F7280D51602947B429679FBD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76BFD7834B0A8E2E24864531 /* Pods-SashidoParseIntegration.debug.xcconfig */,
+				BAEE13E0A689C1FA75971D00 /* Pods-SashidoParseIntegration.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BDB395B1F7FA59A00DDBB7B /* Build configuration list for PBXNativeTarget "SashidoParseIntegration" */;
 			buildPhases = (
+				72F675D5408797477E180228 /* [CP] Check Pods Manifest.lock */,
 				3BDB39451F7FA59A00DDBB7B /* Sources */,
 				3BDB39461F7FA59A00DDBB7B /* Frameworks */,
 				3BDB39471F7FA59A00DDBB7B /* Resources */,
+				A2F9FC62DEE283164F5DF136 /* [CP] Embed Pods Frameworks */,
+				F1E2FBE4E9061D8360518076 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72F675D5408797477E180228 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SashidoParseIntegration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2F9FC62DEE283164F5DF136 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SashidoParseIntegration/Pods-SashidoParseIntegration-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SashidoParseIntegration/Pods-SashidoParseIntegration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1E2FBE4E9061D8360518076 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SashidoParseIntegration/Pods-SashidoParseIntegration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3BDB39451F7FA59A00DDBB7B /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		3BDB395C1F7FA59A00DDBB7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BFD7834B0A8E2E24864531 /* Pods-SashidoParseIntegration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +370,7 @@
 		};
 		3BDB395D1F7FA59A00DDBB7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAEE13E0A689C1FA75971D00 /* Pods-SashidoParseIntegration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
